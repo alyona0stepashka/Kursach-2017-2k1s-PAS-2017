@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  PASlib.cpp
+d:\01\01\pas-2017\pasasm\paslib\paslib.cpp(20): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+d:\01\01\pas-2017\pasasm\paslib\paslib.cpp(26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  PASlib.vcxproj -> D:\01\01\PAS-2017\PASasm\Debug\PASlib.lib

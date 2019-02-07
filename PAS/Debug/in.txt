@@ -1,0 +1,45 @@
+destiny count fund(count x, count y)
+{
+oops count z;
+oops count t;
+oops count s;
+z = isqr(x, 2);
+t = isqrt(y, 3);
+s = x*(z+t);
+quintessence s; 
+}
+
+destiny count funs(road a, count b)
+{
+oops count c;
+c = strl(a) - b;
+quintessence c; 
+}
+
+birth
+{
+oops count x;
+x = 5;
+oops count y;
+y=10;
+if (x<y)
+[
+ququed(x);
+]
+else
+[
+ququed(y);
+]
+oops count z;
+z = fund(x, y);
+ququed (z); 
+oops road sa;
+sa = 'Hello World';
+z = funs(sa, x);
+ququed(z);
+oops road sb;
+sb='Fantastic!';
+quques(sb);
+quques('0123456789876543210');
+quintessence 0;
+}

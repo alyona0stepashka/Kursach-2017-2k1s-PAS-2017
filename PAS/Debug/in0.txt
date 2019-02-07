@@ -1,0 +1,45 @@
+destiny count fcount(count x, count y)
+{
+û
+oops count z;
+oops count t;
+oops count s;
+z = isqr(x, 2);
+t = isqrt(y, 3);
+s = x*(z+t);
+quintessence s; 
+}
+
+destiny count froad(road a, count b)
+{
+oops count c;
+c = strl(a) - b;
+quintessence c; 
+}
+
+birth
+{
+
+oops count x;
+x = 5;
+oops count y;
+y = 8;
+if (x<y)
+[
+quques('x is less than y');
+]
+else
+[
+quques('y is less than x');
+]
+
+oops count z;
+z = fcount(x, y);
+ququed (z); 
+
+oops road sa;
+sa = 'PAS-2017';
+z = froad(sa, x);
+ququed(z);
+quintessence 0;
+}

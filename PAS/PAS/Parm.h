@@ -1,0 +1,46 @@
+#pragma once
+#include "stdafx.h"
+#include "CodeGeneration.h"
+#include "Error.h"
+#include "FST.h"
+#include "GRB.h"
+#include "In.h"
+#include "IT.h"
+#include "LexicalAnalize.h"
+#include "Log.h"
+#include "LT.h"
+#include "MFST.h" 
+#include "PolishNotation.h"
+#include "SemA.h"
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <queue>
+#include<iomanip>
+#include <stack>
+
+#define PARM_IN  L"-in:"				//ключ для файла исходного кода
+#define PARM_OUT L"-out:"				//ключ для файла объектного кода
+#define PARM_LOG L"-log:"				//ключ для файла журнала
+#define PARM_lex L"-lex"
+#define PARM_ID  L"-id"
+#define PARM_TREE L"-tree"
+#define PARM_MAX_SIZE 300				//максимальная длина строки параметра
+#define PARM_OUT_DEFAULT_EXT L".out"	//расширение файла объектного кода по умолчанию
+#define PARM_LOG_DEFAULT_EXT L".log"	//расгирение файла протокола по умолчанию
+
+namespace Parm		//обработка входных параметров
+{
+	struct PARM		//входные параметры
+	{
+		wchar_t in[PARM_MAX_SIZE];		//-in:  имя файла исходного кода
+		wchar_t out[PARM_MAX_SIZE];		//-out: имя файла объектного кода
+		wchar_t log[PARM_MAX_SIZE];		//-lig: имя файла протокола
+
+		bool lex = false;
+		bool id = false;
+		bool tree = false;
+	};
+	PARM getparm(int argc, _TCHAR* argv[]);	//сформировать struct PARM на основе параметров функции main
+}
